@@ -55,7 +55,7 @@ function displayProducts(plants) {
       <figure><img src="${plant.image}" class="h-40 w-full object-cover rounded-t-lg"></figure>
       <div class="card-body">
         <h2 onclick="openModal(${plant.id})" class="font-semibold cursor-pointer text-green-700 underline">${plant.name}</h2>
-        <p class="text-sm text-gray-600">${plant.short_description}</p>
+        <p class="text-sm text-gray-600">${plant.description}</p>
         <div class="flex justify-between">
           <span class="badge bg-[#DCFCE7] text-[#62AB80] text-[15px]">${plant.category}</span>
           <span class="font-bold text-[15px]">৳${plant.price}</span>
