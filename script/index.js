@@ -17,7 +17,7 @@ async function loadCategories() {
   `;
   data.categories.forEach(cat => {
     const li = document.createElement("li");
-    li.innerHTML = `<a onclick="loadProductsByCategory(${cat.id}, this)">${cat.category}</a>`;
+    li.innerHTML = `<a onclick="loadProductsByCategory(${cat.id}, this)">${cat.category_name}</a>`;
     categoryList.appendChild(li);
   });
 }
@@ -135,54 +135,3 @@ loadProducts();
 
 
 
-
-
-
-
-
-
-
-
-//  const cartItemsEl = document.getElementById("cart-items");
-//     const cartTotalEl = document.getElementById("cart-total");
-//     let cart = [];
-
-//     function renderCart() {
-//       cartItemsEl.innerHTML = "";
-//       let total = 0;
-//       cart.forEach((item, index) => {
-//         total += item.price * item.qty;
-//         const li = document.createElement("li");
-//         li.className = "flex justify-between items-center";
-//         li.innerHTML = `
-//           <span>\${item.name} (x\${item.qty})</span>
-//           <span>$\${item.price * item.qty}</span>
-//           <button class="btn btn-xs btn-error ml-2" onclick="removeFromCart(\${index})">X</button>
-//         `;
-//         cartItemsEl.appendChild(li);
-//       });
-//       cartTotalEl.textContent = total;
-//     }
-
-//     function addToCart(name, price) {
-//       const existing = cart.find(item => item.name === name);
-//       if (existing) {
-//         existing.qty++;
-//       } else {
-//         cart.push({ name, price: parseFloat(price), qty: 1 });
-//       }
-//       renderCart();
-//     }
-
-//     function removeFromCart(index) {
-//       cart.splice(index, 1);
-//       renderCart();
-//     }
-
-//     document.querySelectorAll(".add-to-cart").forEach(btn => {
-//       btn.addEventListener("click", () => {
-//         const name = btn.getAttribute("data-name");
-//         const price = btn.getAttribute("data-price");
-//         addToCart(name, price);
-//       });
-//     });
