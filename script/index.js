@@ -74,11 +74,11 @@ async function openModal(id) {
   const data = await res.json();
   hideSpinner();
 
-  document.getElementById("modal-title").textContent = data.plant.name;
-  document.getElementById("modal-img").src = data.plant.image;
-  document.getElementById("modal-desc").textContent = data.plant.description;
-  document.getElementById("modal-category").textContent = data.plant.category;
-  document.getElementById("modal-price").textContent = data.plant.price;
+  document.getElementById("modal-title").textContent = data.plants.name;
+  document.getElementById("modal-img").src = data.plants.image;
+  document.getElementById("modal-desc").textContent = data.plants.description;
+  document.getElementById("modal-category").textContent = data.plants.category;
+  document.getElementById("modal-price").textContent = data.plants.price;
 
   document.getElementById("plant-modal").showModal();
 }
